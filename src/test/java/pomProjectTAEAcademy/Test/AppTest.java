@@ -1,4 +1,4 @@
-package pomProjectTAEAcademy;
+package pomProjectTAEAcademy.Test;
 
 import static org.junit.Assert.assertTrue;
 
