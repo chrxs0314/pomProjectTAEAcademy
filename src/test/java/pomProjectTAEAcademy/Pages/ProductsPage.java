@@ -18,13 +18,17 @@ public class ProductsPage extends BasePage{
     private List<WebElement> products;
     @FindBy(className = "shopping_cart_link")
     private WebElement cartBtn;
+    @FindBy(id = "react-burger-menu-btn")
+    private WebElement menuBtn;
+    @FindBy(id = "logout_sidebar_link")
+    private WebElement logoutBtn;
 
     Random r = new Random();
 
     private Set<Integer> addedProductsIndex = new HashSet<>();
 
     public void addProducts() {
-        int productsAddSize = r.nextInt(6) + 1;
+        int productsAddSize = 3;
         if (!products.isEmpty()) {
             for (int i = 0; i < productsAddSize; i++) {
                 int randomIndex;
@@ -43,6 +47,12 @@ public class ProductsPage extends BasePage{
 
     public void openShoppingCart(){
         cartBtn.click();
+    }
+
+    public void logout(){
+        menuBtn.click();
+        isElementDisplayed(logoutBtn);
+        logoutBtn.click();
     }
 
     public ProductsPage(WebDriver driver, String url) {

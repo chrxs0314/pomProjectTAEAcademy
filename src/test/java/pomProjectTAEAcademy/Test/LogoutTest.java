@@ -1,24 +1,16 @@
 package pomProjectTAEAcademy.Test;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import pomProjectTAEAcademy.Pages.CartPage;
 import pomProjectTAEAcademy.Pages.CheckoutPage;
 import pomProjectTAEAcademy.Pages.ProductsPage;
 
-public class RemovingElementTest extends BaseTest{
+public class LogoutTest extends BaseTest{
     ProductsPage productsPage;
-    CartPage cart;
-    CheckoutPage checkout;
 
     @Test
-    public void removingElementsTest(){
+    public void logoutTest(){
         productsPage = getProductsPage();
-        productsPage.addProducts();
-        productsPage.openShoppingCart();
-
-        cart = getCartPage();
-        cart.removeElements();
-
+        productsPage.logout();
     }
 }

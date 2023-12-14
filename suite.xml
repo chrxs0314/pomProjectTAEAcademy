@@ -4,6 +4,8 @@
         <classes>
             <class name="pomProjectTAEAcademy.Test.BaseTest" />
             <class name="pomProjectTAEAcademy.Test.PurchaseProductTest" />
+            <class name="pomProjectTAEAcademy.Test.RemovingElementTest" />
+            <class name="pomProjectTAEAcademy.Test.LogoutTest" />
         </classes>
     </test>
 </suite>
